@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>去哪儿网</title>
+    <link rel="stylesheet" href="css/reset.css">
+</head>
+<style>
+    html{
+        font-size: 62.5%;
+    }
+    #alert{
+            font-size: 3rem;
+            text-align: center;
+            display: none;
+    }
+    @media screen and (min-width: 750px){
+        #alert{
+            display: block;
+        }
+        #content{
+            display: none;
+        }
+    }
+    .wrap{
+        width: 96%;
+        margin: 0 auto;
+        padding-bottom: 60px;
+        height:  calc(100% - 60px);;
+        /* height: 50%; */
+
+    }
+    .warp header{
+        display: flex;/* 使用弹性盒模型布局 */
+        flex-wrap: wrap;/* 允许弹性容器内的项目换行 */
+        text-align: center;
+     
+       
+
+    }
+    .warp header .item{
+        width: 20%; /* 里面每个占百分之二十*/
+        margin-top: 1rem;
+    }
+    .warp header .item img{
+        width: 40%; /* 里面每个占百分之四十*/
+    }
+    .warp header .item.big img{
+        width: 70%; /* 里面每个占百分之四十*/
+    }
+
+
+
+
+    .tab{
+        display: flex;
+         justify-content: space-around;
+         position: fixed;
+         width: 100%;
+         bottom:0;
+         height:60px;
+         box-sizing:border-box;
+         border-top: 1px solid #ccc;
+         /* background-color: pink; */
+         background-color: white;
+    }
+    .tab a {
+        display: block;
+        width: 20%;
+        height: 100%;
+        text-align: center;
+        margin: 0 auto;
+        /* background-color: gold; */
+    }
+    .tab a img{
+        display: block;
+        height: 30px;
+        margin: 5px auto 0;
+        
+    }
+    .tab a p{
+        height: 20px;
+        line-height: 10px;
+        font-size: 1.4rem;
+        color: #ccc;
+    
+
+    }
+    .warp .sale h3{
+        font-size: 3rem;
+        font-weight: 900;
+    }
+    .warp .sale .buts{
+        display: flex;/*设置弹性盒子*/
+        margin-top: 1rem;/*顶部外边距1rem*/
+    }
+    .warp .sale .buts div{
+        width: 25%;
+        height: 3rem;
+        line-height: 3rem;/*行高*/
+        font-size: 1.4rem;
+        text-align: center;
+        border-radius:4px ;
+    }
+    .warp .sale .buts div:nth-of-type(1){
+      background-color: #00c0c8;
+      color: white;
+    }
+    .warp .sale .buts div:nth-of-type(2){/*buts 的元素内部的第二个 <div> 元素*/
+       /* box-sizing: border-box; */
+       /*
+       这行代码设置 <div> 元素的盒模型为 border-box。这意味着元素的宽度和高度将包括内边距（padding）
+        和边框（border）的宽度，而不是在元素的总宽度和高度之外添加这些值。这使得宽度和高度的计算更加直观和容易。*/
+       border: 1px solid#ccc; 
+       color: #ccc;
+       margin-left: 1rem;
+    }
+    .warp .sale .items{
+        display: flex;
+        flex-wrap: wrap;/*
+        flex-wrap: wrap; 是一个CSS属性，用于控制弹性盒（flexbox）布局中的项目是否应该在需要时换行。
+
+在弹性盒布局中，默认情况下，所有的项目（flex items）都会尝试放在同一条线上（即同一行或同一列，取决于主轴的方向）。
+但是，如果容器（flex container）的空间不足以容纳所有的项目，那么这些项目可能会溢出容器，造成布局问题。
+        */
+        justify-content: space-between;/*
+        ustify-content: space-between;：这行代码设置弹性盒的 justify-content 属性为 space-between。这个属性决定了弹性盒中项目（flex items）
+        在主轴上的对齐方式。space-between 表示项目之间的间隔相等，第一个项目与容器的开始对齐，最后一个项目与容器的结束对齐。
+        */
+        margin-top: 0.5rem;
+    }
+    .warp .sale .items .item{
+        width: 48%;
+
+    }
+    .warp .sale .items .item img{
+        width: 100%;
+        border-radius: 4px;
+
+    }
+    .warp .sale .items .item .info{
+      font-size: 1.6rem;
+
+    }
+    .warp .sale .items .item .price{
+      font-size: 2.6rem;
+      color: orange;
+
+    }
+</style>
+<body>
+    <!-- <h1>去哪儿网</h1> -->
+    <p id = "alert">请使用移动端打开</p>
+    <div id = "content">
+        <div class="warp">
+            <header>
+
+                   <div class="item big">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item big">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item big">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item big">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item big">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item ">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                <div class="item">
+                    <img src="image/icon/2.png">
+                    <p>酒店</p>
+                </div>
+                
+            </header>
+            <section class="sale">
+                <h3>特惠度假</h3>
+                <div class="buts">
+                    <div class="but">当季热门度假</div>
+                    <div class="but">今日特惠度假</div>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <img src="image/icon/3.jpg">
+                        <p class="info">含往返飞机票</p>
+                        <p class="price"> ￥99</p>
+                    </div>
+                    <div class="item">
+                        <img src="image/icon/4.png">
+                        <p class="info">含往返飞机票</p>
+                        <p class="price"> ￥99</p>
+                    </div>
+                    <div class="item">
+                        <img src="image/icon/5.png">
+                        <p class="info">含往返飞机票</p>
+                        <p class="price"> ￥99</p>
+                    </div>
+                    <div class="item">
+                        <img src="image/icon/6.png">
+                        <p class="info">含往返飞机票</p>
+                        <p class="price"> ￥99</p>
+                    </div>
+                </div>
+            </section>
+            <!-- <a class="more">更多特惠度假</a> -->
+        </div>
+        <div class="tab">
+        <a href ="#" class="item">
+            <img src="./image/tab/qn.png">
+            <p>去哪</p>
+        </a>
+        <a href ="#" class="item">
+            <img src="./image/tab/dd.png">
+            <p>订单</p>
+        </a>
+        <a href ="#" class="item">
+            <img src="./image/tab/kf.png">
+            <p>客服</p>
+        </a>
+        <a href ="#" class="item">
+            <img src="./image/tab/wd.png">
+            <p>我的</p>
+        </a>
+        </div>
+    </div>
+</body>
+</html>
